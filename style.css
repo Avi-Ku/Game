@@ -1,36 +1,39 @@
-body{
+body {
     text-align: center;
     background-color: aqua;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-.container{
-height: 70vh;
-justify-content: center;
-align-items: center;
-display: flex;
 
-}
-.game{
-    height: 60vh;
-    width: 60vh;
-    flex-wrap: wrap;
+.container {
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5vmin;
-   
 }
-.btn{
-    height: 18vmin; 
-    width:18vmin ;
+
+.game {
+    height: 60vh;
+    width: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.btn {
+    height: 18vmin;
+    width: 18vmin;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 0 1rem rgb(0, 0, 0, 0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 8vmin;
     color: #8B0000;
     background-color: white;
-    
 }
-#reset-btn{
+
+#reset-btn, #new-btn {
     padding: 10px;
     margin: 10px;
     background-color: black;
@@ -38,18 +41,55 @@ display: flex;
     border-radius: 1rem;
     border: none;
 }
-#new-btn{
-    padding: 10px;
-    margin: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 1rem;
-    border: none;
-}
-#msg{
+
+#msg {
     color: white;
     font-size: 40px;
 }
-.hide{
+
+.hide {
     display: none;
+}
+
+/* Media Query for Tablets and Smaller Devices (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        height: auto; /* Adjust container height */
+        padding: 10px;
+    }
+
+    .game {
+        height: auto; /* Allow game area to adjust */
+        width: 100%; /* Full width */
+        max-width: 400px; /* Optional: Set a max-width for larger screens */
+    }
+
+    .btn {
+        height: 20vw; /* Adjust button size */
+        width: 20vw;
+        font-size: 7vw; /* Adjust font size */
+    }
+
+    #msg {
+        font-size: 24px; /* Smaller font size */
+    }
+}
+
+/* Media Query for Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .btn {
+        height: 25vw; /* Larger button size for touch targets */
+        width: 25vw;
+        font-size: 6vw; /* Adjust font size */
+    }
+
+    #msg {
+        font-size: 20px; /* Even smaller font size */
+    }
+
+    #reset-btn, #new-btn {
+        padding: 8px; /* Adjust padding for buttons */
+        margin: 5px;
+        font-size: 16px; /* Adjust font size */
+    }
 }
