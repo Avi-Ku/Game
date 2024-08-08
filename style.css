@@ -76,7 +76,7 @@ body {
 }
 
 /* Media Query for Mobile Devices (up to 480px) */
-@media (max-width: 480px) {
+@media (max-width: 470px) {
     .btn {
         height: 25vw; /* Larger button size for touch targets */
         width: 25vw;
